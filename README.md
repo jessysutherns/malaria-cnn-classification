@@ -30,6 +30,8 @@ It leverages transfer learning with MobileNetV2 to build an efficient and accura
 * **Accuracy:** ~91%
 * **F1-score:** ~0.91
 
+![Model Results](outputs/result.png)
+
 ### Confusion Matrix
 
 ```
