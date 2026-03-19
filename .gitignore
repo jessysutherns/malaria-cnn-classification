@@ -2,6 +2,5 @@ data/
 venv/
 *.keras
 *.h5
-*.png
 *.csv
 __pycache__/

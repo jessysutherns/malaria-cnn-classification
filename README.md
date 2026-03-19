@@ -1,5 +1,9 @@
 # 🧬 Malaria Cell Image Classification using CNNs
 
+> Deep learning model for detecting malaria-infected blood cells using transfer learning (MobileNetV2).
+
+---
+
 ## 📌 Overview
 
 This project uses deep learning to classify blood smear images as **Parasitized** or **Uninfected**.
@@ -17,6 +21,15 @@ It leverages transfer learning with MobileNetV2 to build an efficient and accura
 
 ---
 
+## 🚀 Key Features
+
+* Transfer learning using MobileNetV2
+* Image data augmentation
+* Binary classification (infected vs uninfected)
+* Evaluation using precision, recall, and F1-score
+
+---
+
 ## 🧠 Model
 
 * **MobileNetV2 (Transfer Learning)**
@@ -29,6 +42,7 @@ It leverages transfer learning with MobileNetV2 to build an efficient and accura
 
 * **Accuracy:** ~91%
 * **F1-score:** ~0.91
+* **Dataset size:** ~40,000 images
 
 ![Model Results](outputs/result.png)
 
@@ -38,6 +52,15 @@ It leverages transfer learning with MobileNetV2 to build an efficient and accura
 [[2202  417]
  [  55 2563]]
 ```
+
+---
+
+## 📂 Dataset Structure
+
+Train / Validation / Test split:
+
+* Parasitized
+* Uninfected
 
 ---
 
@@ -62,15 +85,8 @@ https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria
 
 ## 🚀 How to Run
 
-1. Install dependencies:
-
-```
+```bash
 pip install -r requirements.txt
-```
-
-2. Run the project:
-
-```
 python main.py
 ```
 
@@ -78,7 +94,6 @@ python main.py
 
 ## 📂 Project Structure
 
-```
 malaria-cnn-classification/
 │
 ├── main.py
@@ -86,8 +101,7 @@ malaria-cnn-classification/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-└── data/
-```
+└── outputs/
 
 ---
 
