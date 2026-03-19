@@ -27,6 +27,7 @@ It leverages transfer learning with MobileNetV2 to build an efficient and accura
 * Image data augmentation
 * Binary classification (infected vs uninfected)
 * Evaluation using precision, recall, and F1-score
+* Prediction system for classifying new images
 
 ---
 
@@ -40,17 +41,17 @@ It leverages transfer learning with MobileNetV2 to build an efficient and accura
 
 ## 📊 Results
 
-* **Accuracy:** ~91%
-* **F1-score:** ~0.91
+* **Accuracy:** ~92%
+* **F1-score:** ~0.92
 * **Dataset size:** ~40,000 images
 
 ![Model Results](outputs/result.png)
 
 ### Confusion Matrix
 
-```
-[[2202  417]
- [  55 2563]]
+```id="d5l3g7"
+[[2235  384]
+ [  58 2560]]
 ```
 
 ---
@@ -85,9 +86,41 @@ https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria
 
 ## 🚀 How to Run
 
-```bash
+```bash id="9h9u6n"
 pip install -r requirements.txt
 python main.py
+```
+
+---
+
+## 🔍 Prediction
+
+Run prediction on a new image:
+
+```bash id="t0i7vc"
+python predict.py --image "path_to_image"
+```
+
+Example output:
+
+```id="h2t0fa"
+Prediction: Uninfected (97.57%)
+```
+
+---
+
+## 🧪 Example
+
+Run prediction on sample image:
+
+```bash id="j9s4k2"
+python predict.py --image "samples/test.png"
+```
+
+Example output:
+
+```id="4o5c9c"
+Prediction: Parasitized (97%)
 ```
 
 ---
@@ -97,11 +130,15 @@ python main.py
 malaria-cnn-classification/
 │
 ├── main.py
+├── predict.py
 ├── split_data.py
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-└── outputs/
+├── outputs/
+│   └── result.png
+└── samples/
+└── test.png
 
 ---
 
@@ -110,7 +147,7 @@ malaria-cnn-classification/
 * Add ResNet50 model for comparison
 * Improve accuracy with hyperparameter tuning
 * Deploy model using Streamlit or Flask
-* Add image prediction interface
+* Add interactive UI for predictions
 
 ---
 
